@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--blue: #0071FF;
+	--light-blue: #B6DBF6;
+	--dark-blue: #005DD1;
+	--grey: #f2f2f2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #00b28f;
+}
+
+.title{
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+body{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #0b345d;
+    background-image: linear-gradient(155deg, #002f62 0%, #18496a 50%, #138b89 100%);
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.registration-form{
+    background-color: #fff;
+    max-width: 960px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.input-field input :focus,
+.input-field select:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+
+.input-field input,
+select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.fields{
+    display: grid;
+    /* background-color: antiquewhite; */
+    grid-template-columns: auto auto auto;
+    gap: 20px 20px;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+
+    /* width: 200px; */
+    /* background-color: blue; */
+}
+
+.btnText{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover{
+    background-color: #00b28f;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 15px 0;
+    background-color: #009578;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+#real-file{
+    background: white;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    width: 350px;
+    outline: none;
+}
+
+::-webkit-file-upload-button{
+    color: white;
+    background: #009578;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px 1px #6b4559;
+    outline: none;
+}
+
+.checkboxess{
+
+        display: grid;
+        /* background-color: antiquewhite; */
+        grid-template-columns: auto auto auto auto auto auto;
+        gap: 30px 30px;
+
+}
+
+.fields-2{
+    margin-top: 50px;
+}
+
+.buttons{
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.documents{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: auto auto;
+    gap: 100px;
+    justify-items: center;
+    align-items: center;
+}
+
+.attachment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    color: #333;
+}
+.subtitle{
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+@media (max-width: 650px) {
+
+    body{
+        display: block;
+    }
+    .registration-form{
+        width: auto;
+        height: auto; /*could be 100% */
+        padding: 0px 10px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .fields{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-field{
+        width: 100%;
+    }
+
+    .header{
+        font-size: 12px;
+    }
+
+    .title{
+        font-size: 12px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .input-field input,
+select {
+    height: 30px;
+}
+
+form .buttons button , .backBtn{
+    margin-right: 0px;
+}
+
+form button, .backBtn{
+    height: 35px;
+    margin: 10px 0px;
+    width: 90%;
+}
+
+.checkboxess{
+
+    display: grid;
+    /* background-color: antiquewhite; */
+    grid-template-columns: auto auto auto;
+    gap: 90px 60px;
+    margin-top: 40px;
+
+}
+
+.buttons{
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fields-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn2{
+    width: 45%;
+    height: 40px;
+}
+
+.documents{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.attachment{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    color: #333;
+}
+
+#real-file{
+    width: 90%;
+}
+
+  }
+
+
+
+  @media (max-width: 900px) and (min-width: 651px){
+    .fields{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px 20px;
+    }
+
+    /* .checkboxess{
+
+        display: grid;
+        background-color: antiquewhite;
+        grid-template-columns: auto auto auto;
+        gap: 90px 60px;
+        margin-top: 40px;
+    
+    } */
+
+    .btn2{
+        width: 45%;
+        height: 40px;
+    }
+
+    #real-file{
+        width: 80%;
+    }
+
+    .documents{
+        font-size: 12px;
+    }
+  }
