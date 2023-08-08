@@ -171,6 +171,7 @@ form button, .backBtn{
 ::-webkit-file-upload-button{
     color: white;
     background: #009578;
+    cursor: pointer;
     padding: 10px;
     border: none;
     border-radius: 50px;
