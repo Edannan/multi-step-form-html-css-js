@@ -289,10 +289,10 @@ form button, .backBtn{
     justify-content: space-between;
 }
 
-.fields-2{
+/* .fields-2{
     display: flex;
     flex-direction: column;
-}
+} */
 
 .btn2{
     width: 45%;
