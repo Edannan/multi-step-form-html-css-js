@@ -2,31 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-	--blue: #0071FF;
-	--light-blue: #B6DBF6;
-	--dark-blue: #005DD1;
-	--grey: #f2f2f2;
+    --blue: #0071FF;
+    --light-blue: #B6DBF6;
+    --dark-blue: #005DD1;
+    --grey: #f2f2f2;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-.header{
+.header {
     position: relative;
     font-size: 20px;
     font-weight: 600;
     color: #333;
 }
 
-.header::before{
+.header::before {
     content: "";
     position: absolute;
     left: 0;
@@ -37,7 +38,7 @@ html{
     background-color: #00b28f;
 }
 
-.title{
+.title {
     margin-bottom: 8px;
     font-size: 16px;
     font-weight: 500;
@@ -45,9 +46,9 @@ html{
     color: #333;
 }
 
-body{
+body {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -55,21 +56,21 @@ body{
     background-image: linear-gradient(155deg, #002f62 0%, #18496a 50%, #138b89 100%);
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.show{
+.show {
     display: block;
 }
 
-.registration-form{
+.registration-form {
     background-color: #fff;
     max-width: 960px;
     width: 100%;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .input-field input :focus,
@@ -78,10 +79,11 @@ body{
 }
 
 .input-field select,
-.input-field input[type="date"]{
+.input-field input[type="date"] {
     color: #707070;
 }
-.input-field input[type="date"]:valid{
+
+.input-field input[type="date"]:valid {
     color: #333;
 }
 
@@ -104,45 +106,47 @@ select {
     color: #2e2e2e;
 }
 
-.fields{
+.fields {
     display: grid;
-    /* background-color: antiquewhite; */
     grid-template-columns: auto auto auto;
     gap: 20px 20px;
 }
 
-.input-field{
+.input-field {
     display: flex;
     flex-direction: column;
-
-    /* width: 200px; */
-    /* background-color: blue; */
 }
 
-.btnText{
+.btnText {
     font-size: 14px;
     font-weight: 400;
 }
 
-form button:hover{
+form button:hover {
     background-color: #00b28f;
 }
+
 form button i,
-form .backBtn i{
+form .backBtn i {
     margin: 0 6px;
 }
-form .backBtn i{
+
+form .backBtn i {
     transform: rotate(180deg);
 }
-form .buttons{
+
+form .buttons {
     display: flex;
     align-items: center;
 }
-form .buttons button , .backBtn{
+
+form .buttons button,
+.backBtn {
     margin-right: 14px;
 }
 
-form button, .backBtn{
+form button,
+.backBtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,64 +163,67 @@ form button, .backBtn{
     cursor: pointer;
 }
 
-#real-file{
+.real-file {
     background: white;
     font-size: 16px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 10px black;
-    width: 350px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px black;
     outline: none;
 }
 
-::-webkit-file-upload-button{
+::-webkit-file-upload-button {
     color: white;
     background: #009578;
     cursor: pointer;
     padding: 10px;
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     box-shadow: 1px 0 1px 1px #6b4559;
     outline: none;
 }
 
-.checkboxess{
+.checkboxess {
 
-        display: grid;
-        /* background-color: antiquewhite; */
-        grid-template-columns: auto auto auto auto auto auto;
-        gap: 30px 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 30px 30px;
 
 }
 
-.fields-2{
+.fields-2 {
     margin-top: 50px;
 }
 
-.buttons{
+.buttons {
     margin-top: 40px;
     width: 50%;
     display: flex;
     justify-content: space-between;
 }
 
-.documents{
+.documents {
     display: grid;
     margin-top: 20px;
-    grid-template-columns: auto auto;
-    gap: 100px;
+    grid-template-columns: 30% 30% 30%;
+    gap: 100px 30px;
     justify-items: center;
     align-items: center;
 }
 
-.attachment{
+.attachment {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     color: #333;
 }
-.subtitle{
+
+.attachment label{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.subtitle {
     margin-bottom: 30px;
     font-weight: 600;
     color: #333;
@@ -224,131 +231,122 @@ form button, .backBtn{
 
 @media (max-width: 650px) {
 
-    body{
+    body {
         display: block;
     }
-    .registration-form{
+
+    .registration-form {
         width: auto;
-        height: auto; /*could be 100% */
+        height: auto;
+        /*could be 100% */
         padding: 0px 10px;
         border-radius: 0px;
         display: flex;
         flex-direction: column;
-        
+
     }
 
-    .fields{
+    .fields {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .input-field{
+    .input-field {
         width: 100%;
     }
 
-    .header{
+    .header {
         font-size: 12px;
     }
 
-    .title{
+    .title {
         font-size: 12px;
         margin-top: 15px;
         margin-bottom: 10px;
     }
 
     .input-field input,
-select {
-    height: 30px;
+    select {
+        height: 30px;
+    }
+
+    form .buttons button,
+    .backBtn {
+        margin-right: 0px;
+    }
+
+    form button,
+    .backBtn {
+        height: 35px;
+        margin: 10px 0px;
+        width: 90%;
+    }
+
+    .checkboxess {
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 90px 60px;
+        margin-top: 40px;
+
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    .buttons {
+        margin-top: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn2 {
+        width: 45%;
+        height: 40px;
+    }
+
+    .documents {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .attachment {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #333;
+    }
+
 }
 
-form .buttons button , .backBtn{
-    margin-right: 0px;
-}
-
-form button, .backBtn{
-    height: 35px;
-    margin: 10px 0px;
-    width: 90%;
-}
-
-.checkboxess{
-
-    display: grid;
-    /* background-color: antiquewhite; */
-    grid-template-columns: auto auto auto;
-    gap: 90px 60px;
-    margin-top: 40px;
-
-}
-
-.buttons{
-    margin-top: 120px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* .fields-2{
-    display: flex;
-    flex-direction: column;
-} */
-
-.btn2{
-    width: 45%;
-    height: 40px;
-}
-
-.documents{
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-}
-
-.attachment{
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    color: #333;
-}
-
-#real-file{
-    width: 90%;
-}
-
-  }
 
 
-
-  @media (max-width: 900px) and (min-width: 651px){
-    .fields{
+@media (max-width: 900px) and (min-width: 651px) {
+    .fields {
         display: grid;
         grid-template-columns: auto auto;
         gap: 20px 20px;
     }
 
-    /* .checkboxess{
-
-        display: grid;
-        background-color: antiquewhite;
-        grid-template-columns: auto auto auto;
-        gap: 90px 60px;
-        margin-top: 40px;
-    
-    } */
-
-    .btn2{
+    .btn2 {
         width: 45%;
         height: 40px;
     }
 
-    #real-file{
-        width: 80%;
-    }
-
-    .documents{
+    .documents {
         font-size: 12px;
     }
-  }
+
+    .real-file {
+        font-size: 12px;
+    }
+
+    .attachment label{
+        font-size: 11px;
+    }
+}

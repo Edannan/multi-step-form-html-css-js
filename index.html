@@ -1,180 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="16x16">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" integrity="sha512-MqEDqB7me8klOYxXXQlB4LaNf9V9S0+sG1i8LtPOYmHqICuEZ9ZLbyV3qIfADg2UJcLyCm4fawNiFvnYbcBJ1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js" integrity="sha512-XVz1P4Cymt04puwm5OITPm5gylyyj5vkahvf64T8xlt/ybeTpz4oHqJVIeDtDoF5kSrXMOUmdYewE4JS/4RWAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+        <title>Registration Form</title>
+    </head>
 <body>
     <div class="registration-form">
         <div class="header">Supplier Registration</div>
-        <div class="title">Supplier Details</div>
+        <div class="title" id="title">Supplier Details</div>
         <form action="#" method="post">
-        <div class="fields" id="field-1">
-            <div class="input-field">
-                <label>Registration date</label>
-                <input type="date" name="date" value="" required>
-            </div>
-            <div class="input-field">
-                <label>Full name</label>
-                <input type="text" placeholder="Enter your full name" name="fullname" value="" required>
-            </div>
+            <div class="fields" id="field-1">
+                <div class="input-field">
+                    <label><b>Registration date</b></label>
+                    <input type="date" name="date" class="form-one" required>
+                </div>
+                <div class="input-field">
+                    <label><b>Full name</b></label>
+                    <input type="text" placeholder="Enter your full name" name="fullname" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Company / Organization</label>
-                <input type="text" placeholder="Enter your company / organization" name="company" required>
-            </div>
+                <div class="input-field">
+                    <label><b>Company / Organization</b></label>
+                    <input type="text" placeholder="Enter your company / organization" name="company" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Postal Address</label>
-                <input type="text" placeholder="Enter your postal address" name="address" required>
-            </div>
+                <div class="input-field">
+                    <label><b>Postal Address</b></label>
+                    <input type="text" placeholder="Enter your postal address" name="address" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Location of Business</label>
-                <input type="text" placeholder="Enter location of business" name="location" required>
-            </div>
+                <div class="input-field">
+                    <label><b>Location of Business</b></label>
+                    <input type="text" placeholder="Enter location of business" name="location" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Type of Business</label>
-                <input type="text" placeholder="Enter type of business" name="businesstype" required>
-            </div>
+                <div class="input-field">
+                    <label><b>Type of Business</b></label>
+                    <input type="text" placeholder="Enter type of business" name="businesstype" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Telephone Number</label>
-                <input type="number" placeholder="Enter your telephone number" name="telephone" required>
-            </div>
+                <div class="input-field">
+                    <label><b>Telephone Number</b></label>
+                    <input type="number" placeholder="Enter your telephone number" name="telephone" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" name="email" required>
-            </div>
+                <div class="input-field">
+                    <label><b>Email</b></label>
+                    <input type="email" placeholder="Enter your email" name="email" class="form-one" required>
+                </div>
 
-            <div class="input-field">
-                <label>Gender</label>
-                <select required>
-                    <option disabled selected>Select gender</option>
-                </select>
-            </div>
+                <div class="input-field">
+                    <label><b>Category</b></label>
+                    <select name="category" id="category" class="form-one" required>
+                        <option value="" disabled selected>Select category</option>
+                        <option value="1">Supplier</option>
+                        <option value="2">Transport</option>
+                    </select>
+                </div>
 
-            <div class="input-field">
-                <label>Region</label>
-                <select required>
-                    <option disabled selected>Select region</option>
-                </select>
-            </div>
+                <div class="input-field">
+                    <label><b>Region</b></label>
+                    <select class="form-one" name="region" id="region" required>
+                        <option value="" disabled selected>Select region</option>
+                        <option value="western">Western region</option>
+                        <option value="eastern">Eastern region</option>
+                    </select>
+                </div>
 
-            <div class="input-field">
-                <label>District</label>
-                <select required>
-                    <option disabled selected>Select district</option>
-                </select>
-            </div>
+                <div class="input-field" id="districtdt">
+                    <label><b>District</b></label>
+                    <select name="district" id="district" class="form-one" required>
+                        <option value="" disabled selected>Select district</option>
+                        <option value="ayawasow">Ayawaso West district</option>
+                        <option value="ablekumaw">Ablekuma West district</option>
+                    </select>
+                </div>
 
-            <div class="input-field">
-                <label>Category</label>
-                <select required>
-                    <option disabled selected>Select Category</option>
-                </select>
-            </div>
+                <div class="input-field">
+                    <label><b>How did you first hear about NAFCO?</b></label>
+                    <select name="modeofinfo" id="modeofinfo" class="form-one" required>
+                        <option value="" disabled selected>Select Option</option>
+                        <option value="1">Walking</option>
+                        <option value="2">TV / Radio</option>
+                        <option value="3">Family</option>
+                        <option value="4">Newspaper</option>
+                        <option value="5">Others</option>
+                    </select>
+                </div>
 
-            <button type="button" class="nextBtn" id="nxtbutton-1" onclick="nextpage1()">
-                <span class="btnText">Next</span>
-                <i class="uil uil-navigator"></i>
-            </button>
+                <button type="button" class="nextBtn" id="nxtbutton-1" onclick="nextpage1()">
+                    <span class="btnText">Next</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
             </div>
 
             <div class="fields-2 hide" id="field-2">
                 <div class="subtitle">Please select your commodities:</div>
                 <div class="checkboxess">
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item1" name="item[]" value="Bike">
+                    <label for="item1">bike</label>
                 </div>
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
-                </div>
-    
-                <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item2" name="item[]" value="Bike">
+                    <label for="item2">bike</label>
                 </div>
     
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item3" name="item[]" value="Bike">
+                    <label for="item3">bike</label>
                 </div>
     
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item4" name="item[]" value="Bike">
+                    <label for="item4">bike</label>
+                </div>
+    
+                <div class="input-checkbox">
+                    <input type="checkbox" id="item5" name="item[]" value="Bike">
+                    <label for="item5">bike</label>
                 </div>
 
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item6" name="item[]" value="Bike">
+                    <label for="item6">bike</label>
                 </div>
 
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item7" name="item[]" value="Bike">
+                    <label for="item7">bike</label>
                 </div>
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
-                </div>
-    
-                <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item8" name="item[]" value="Bike">
+                    <label for="item8">bike</label>
                 </div>
     
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item9" name="item[]" value="Bike">
+                    <label for="item9">bike</label>
                 </div>
     
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item10" name="item[]" value="Bike">
+                    <label for="item10">bike</label>
+                </div>
+    
+                <div class="input-checkbox">
+                    <input type="checkbox" id="item11" name="item[]" value="Bike">
+                    <label for="item11">bike</label>
                 </div>
 
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item12" name="item[]" value="Bike">
+                    <label for="item12">bike</label>
                 </div>
                 
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item13" name="item[]" value="Bike">
+                    <label for="item13">bike</label>
                 </div>
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
-                </div>
-    
-                <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item14" name="item[]" value="Bike">
+                    <label for="item14">bike</label>
                 </div>
     
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item15" name="item[]" value="Bike">
+                    <label for="item15">bike</label>
                 </div>
     
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item16" name="item[]" value="Bike">
+                    <label for="item16">bike</label>
+                </div>
+    
+                <div class="input-checkbox">
+                    <input type="checkbox" id="item17" name="item[]" value="Bike">
+                    <label for="item17">bike</label>
                 </div>
 
                 <div class="input-checkbox">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">bike</label>
+                    <input type="checkbox" id="item18" name="item[]" value="Bike">
+                    <label for="item18">bike</label>
                 </div>
             </div>
             
@@ -193,75 +209,232 @@
                 </div>
 
                 <div class="fields-3 hide" id="field-3">
-                <div class="documents" id="bio">
+                    <div class="documents" id="bio">
+    
+                    <div class="regis-form attachment">
+                            <label for="myfile">Attach registration form:</label><br>
+                            <input type="file" id="real-file0" class="real-file" name="regCertImg" />
+                        </div>
     
                         <div class="business-cert attachment">
                             <label for="myfile">Attach business registration certificates:</label><br>
-                            <input type="file" id="real-file" name="business"/>
+                            <input type="file" id="real-file1" class="real-file" name="businessImg" />
                         </div>
-    
     
                         <div class="application-letter attachment">
                             <label for="myfile">Attach application letter:</label><br>
-                            <input type="file" id="real-file" name="appletter" />
-                        </div>
-
-                        <div class="ssnit-cert attachment">
-                            <label for="myfile">Attach tax clearance certificate:</label><br>
-                            <input type="file" id="real-file" name="ssnit"/>
-                        </div>
-
-                        <div class="tax-cert attachment">
-                            <label for="myfile">Attach SSNIT clearance certificate:</label><br>
-                            <input type="file" id="real-file" name="tax"/>
+                            <input type="file" id="real-file2" class="real-file" name="appletterImg" />
                         </div>
     
+                        <div class="ssnit-cert attachment">
+                            <label for="myfile">Attach tax clearance certificate:</label><br>
+                            <input type="file" id="real-file3" class="real-file" name="ssnitImg" />
                         </div>
+    
+                        <div class="tax-cert attachment">
+                            <label for="myfile">Attach SSNIT clearance certificate:</label><br>
+                            <input type="file" id="real-file4" class="real-file" name="taxImg" />
+                        </div>
+    
+                    </div>
                     <div class="buttons">
                         <button type="button" class="backBtn btn2" onclick="backpage2()">
                             <i class="uil uil-navigator"></i>
                             <span class="btnText">Back</span>
                         </button>
-                        
-                        <button type="button" class="sumbit btn2">
+    
+                        <button type="button" class="sumbit btn2" onclick="validationSubmit()">
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                     </div>
-                    </div>
+                </div>
             </form>
     </div>
 
-<script>
-    var document1 = document.getElementById("field-1");
-    var document2 = document.getElementById("field-2");
-    var document3 = document.getElementById("field-3");
+    <script type="text/javascript">
+        var document1 = document.getElementById("field-1");
+        var document2 = document.getElementById("field-2");
+        var document3 = document.getElementById("field-3");
+        var inputs1 = document.querySelectorAll(".form-one");
+        var heading = document.getElementById("title");
 
-    function nextpage1(){
-        document1.classList.remove("fields"); //this is removed to avoid the display conflict
-        document1.classList.add("hide");
-        document2.classList.remove("hide");
-    }
+        function nextpage1() {
+            let allInputsFilled = true; // Initialize flag as true
+            let emailValid = true; // Initialize email validation flag
 
-    function nextpage2(){
-        document2.classList.remove("fields-2");
-        document2.classList.add("hide");
-        document3.classList.remove("hide");
-    }
-
-    function backpage1(){
-        document1.classList.add("fields");
-        document1.classList.remove("hide");
-        document2.classList.add("hide");
-    }
-
-    function backpage2(){
-        document3.classList.add("hide");
-        document2.classList.remove("hide");
-    }
+            for (let i = 0; i < inputs1.length; i++) {
+                if (inputs1[i].value.trim() === "") {
+                    inputs1[i].style.border = "1px solid red";
+                    allInputsFilled = false; // Set flag to false if any input is empty
+                } else {
+                    inputs1[i].style.border = "1px solid #aaa";
+                }
+            }
 
 
+            // Validate email 
+            const emailInput = document.querySelector('[name="email"]');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value)) {
+                emailInput.style.border = "1px solid red";
+                emailValid = false;
+            } else {
+                emailInput.style.border = "1px solid #aaa";
+            }
 
-</script>
+            //move to the next section if email is valid and there are no empty fields
+            if (emailValid && allInputsFilled) {
+                // All inputs are filled
+                heading.innerHTML = "Supplier Commodities";
+                document1.classList.remove("fields");
+                document1.classList.add("hide");
+                document2.classList.remove("hide");
+            } else if (!emailValid && allInputsFilled) {
+                Swal.fire(
+                    'Invalid Email',
+                    "Please enter a valid email address.",
+                    'error'
+                );
+            } else {
+                // Some inputs are empty
+                Swal.fire(
+                    'Required fields',
+                    "Failed. Required field(s) can't be empty!",
+                    'error'
+                );
+            }
+        }
+
+
+        function nextpage2() {
+            const checkboxes = document.querySelectorAll('[name="item[]"]');
+            let atLeastOneCheckboxSelected = false;
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    atLeastOneCheckboxSelected = true;
+                    break; // Exit the loop if at least one checkbox is selected
+                }
+            }
+
+            if (atLeastOneCheckboxSelected) {
+                heading.innerHTML = "Supplier Documents"
+                document2.classList.remove("fields-2");
+                document2.classList.add("hide");
+                document3.classList.remove("hide");
+            } else {
+                Swal.fire(
+                    'Checkbox Selection',
+                    "Please select at least one checkbox.",
+                    'error'
+                );
+            }
+        }
+
+        function backpage1() {
+            heading.innerHTML = "Supplier Details"
+            document1.classList.add("fields");
+            document1.classList.remove("hide");
+            document2.classList.add("hide");
+        }
+
+        function backpage2() {
+            heading.innerHTML = "Supplier Commodities"
+            document3.classList.add("hide");
+            document2.classList.remove("hide");
+        }
+
+        function validationSubmit() {
+            const fileInputs = document.querySelectorAll('.documents input[type="file"]');
+            let isValid = true;
+
+            for (const fileInput of fileInputs) {
+                const selectedFile = fileInput.files[0];
+
+                if (!selectedFile) {
+                    fileInput.style.border = "1px solid red";
+                    isValid = false;
+                    Swal.fire(
+                        'File Validation',
+                        'Please select a file for all input fields.',
+                        'error'
+                    );
+                } else {
+                    const allowedTypes = ["image/jpeg", "image/png"];
+
+                    if (selectedFile && !allowedTypes.includes(selectedFile.type)) {
+                        fileInput.style.border = "1px solid red";
+                        isValid = false;
+                        Swal.fire(
+                            'File Type Error',
+                            'Please select a valid file type (JPEG, PNG).',
+                            'error'
+                        );
+                    } else {
+                        fileInput.style.border = "1px solid #aaa";
+                        isValid = true;
+                    }
+                }
+            }
+
+            if (isValid) {
+                document.getElementById('viewpage').value = 'submit';
+                document.supplierform.submit();
+                // console.log("dansooooooooooooooooooooooooo");
+            }
+
+
+        }
+
+        // var msgbox = document.getElementById("msgstatus");
+        // if (msgbox.value == "success") {
+        //     let title = 'Registration successful';
+        //     let message = 'You will be notified via email or sms after your account has been verified.';
+
+        //     Swal.fire(
+        //         title,
+        //         message,
+        //         'success'
+        //     ).then(function() {
+        //         window.location.href = "index.php?action=Login";
+        //     });
+        // } else if (msgbox.value == "alreadyexist") {
+        //     let title = 'Registration unsuccessful';
+        //     let message = 'User with this email already exists.';
+
+        //     Swal.fire(
+        //         title,
+        //         message,
+        //         'error'
+        //     )
+        // }else if (msgbox.value == "networkissue"){
+        //     let title = 'Registration unsuccessful';
+        //     let message = 'Sorry, there seems to be an issue with your network. Please check your internet connection and try again.';
+
+        //     Swal.fire(
+        //         title,
+        //         message,
+        //         'error'
+        //     )
+        // }
+
+        // document.getElementById("region").addEventListener("change", function() {
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("POST", "public/suppliersreg/getDistricts.php", true);
+        //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        //     xhr.onreadystatechange = function() {
+        //         if (xhr.readyState === 4) {
+        //             if (xhr.status === 200) {
+        //                 document.getElementById("district").innerHTML = xhr.responseText;
+        //             } else {
+        //                 // Handle error
+        //             }
+        //         }
+        //     };
+
+        //     var data = 'data=' + encodeURIComponent(document.getElementById("region").value);
+        //     xhr.send(data);
+        // });
+    </script>
 </body>
 </html>
